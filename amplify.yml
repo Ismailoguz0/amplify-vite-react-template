@@ -10,6 +10,9 @@ frontend:
     build:
       commands:
         - npm run build
+        - npm install -g aws-cdk
+        - cdk bootstrap aws://180483101863/eu-north-1
+        - amplifyPush --simple
   artifacts:
     baseDirectory: dist
     files:
